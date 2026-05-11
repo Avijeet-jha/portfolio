@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="navbar">
+        <h2 class="logo">Avijeet Jha</h2>
+
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#technical-skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+
+            <button onclick="location.href='#contact'" class="talk">
+                Let's talk
+            </button>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-container" id="hero-container">
+            <div class="hero-text">
+                <h1>Avijeet Jha</h1>
+                <h2 id="typing-text"></h2>
+                <p>Building smart solutions using code, creativity, and AI</p>
+                <div class="hero-buttons">
+
+                    <button onclick="location.href='#projects'" class="hero-button">
+                        View My Work
+                    </button>
+
+                    <a href="/img/Jha resume.pdf" download class="hero-button resume-btn">
+                        Download Resume
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="hero-image">
+                <img src="img/ajaha.png" alt="profile">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="main-heading">About Me</h2>
+                <p>
+                    I’m a Full Stack Developer and AI enthusiast focused on building modern and efficient web solutions.
+                    I enjoy solving real-world problems through clean, scalable code and creating responsive,
+                    user-friendly applications. I’m always exploring new technologies to improve my skills and build
+                    impactful projects.
+                </p>
+            </div>
+            <div class="about-bottom">
+                <div class="education">
+                    <div class="edu-header sub-heading" id="education">
+                        <h3> Education</h3>
+
+                        <div class="dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="edu-card-container">
+                        <div class="edu-card active">
+                            <h3>Secondary School</h3>
+                            <p>S.S Sansthan Ganguli, Darbhanga Bihar</p>
+                            <span>2019 – 2021</span>
+
+                        </div>
+                        <div class="edu-card">
+                            <h3>Higher Secondary School</h3>
+                            <p>Harow English School, Darbhanga Bihar</p>
+                            <span>2021 – 2023</span>
+                        </div>
+                        <div class="edu-card">
+                            <h3>B.Tech in Computer Engineering</h3>
+                            <p>G H Raisoni College of Engineering and Managment Jalgaon</p>
+                            <span>2023 – 2027</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="soft-skills">
+                    <h3 class="sub-heading">Soft Skills</h3>
+
+                    <div class="skills-card">
+                        <ul>
+                            <li>Adaptability</li>
+                            <li>Quick Learner</li>
+                            <li>Problem Solving</li>
+                            <li>Teamwork</li>
+                            <li>Communication</li>
+                            <li>critical Thinking</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="technical-skills" id="technical-skills">
+
+        <h2 class="main-heading">Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <!-- Languages -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <div class="icon">💻</div>
+                    <h3 class="sub-heading">Languages</h3>
+                </div>
+
+                <div class="skill-tags">
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <div class="icon">🎨</div>
+                    <h3 class="sub-heading">Frontend</h3>
+                </div>
+
+                <div class="skill-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>React</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <div class="icon">⚙</div>
+                    <h3 class="sub-heading">Backend</h3>
+                </div>
+
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>Flask</span>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <div class="icon">🗄</div>
+                    <h3 class="sub-heading">Database</h3>
+                </div>
+
+                <div class="skill-tags">
+                    <span>SQLite</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <div class="icon">🛠</div>
+                    <h3 class="sub-heading">Tools</h3>
+                </div>
+
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>VS Code</span>
+                    <span>wordpress</span>
+                    <span>Cursor</span>
+                    <span>Lovable</span>
+                </div>
+            </div>
+
+            <!-- AI / ML (🔥 your strength) -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <div class="icon">🤖</div>
+                    <h3 class="sub-heading">AI / ML</h3>
+                </div>
+
+                <div class="skill-tags">
+                    <span>Machine Learning</span>
+                    <span>Computer Vision</span>
+                    <span>YOLO</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="projects" id="projects">
+
+        <div class="projects-container">
+
+            <h2 class="main-heading">Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/img/image detection.png" alt="project">
+                    </div>
+
+                    <div class="project-overlay">
+                        <h3>AI Image Detection</h3>
+                        <p>Detect manipulated images using Deep Learning models.</p>
+
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>YOLOv8</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/gymweb.png" alt="project">
+                    </div>
+
+                    <div class="project-overlay">
+                        <h3>Gym Website</h3>
+                        <p>Responsive fitness website with login system.</p>
+
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/img/ajaha.png" alt="project">
+                    </div>
+
+                    <div class="project-overlay">
+                        <h3>Portfolio Website</h3>
+                        <p>Modern UI portfolio with animations.</p>
+
+                        <div class="project-tech">
+                            <span>UI Design</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements">
+
+        <div class="achievements-container">
+
+            <h2 class="main-heading">Achievements & Recognitions</h2>
+
+            <!-- ========= ACHIEVEMENTS ========= -->
+            <div class="achievement-group">
+
+                <h3 class="sub-heading">Achievements</h3>
+
+                <div class="projects-grid">
+
+                    <div class="achievement-card">
+                        <div class="ach-img">
+                            <img src="img/sih.jpg" alt="SIH">
+                            <span class="ach-date">2025</span>
+                        </div>
+
+                        <div class="ach-content">
+                            <h4>SIH 2025 Selection</h4>
+                            <p>
+                                Selected to represent college at Smart India Hackathon 2025 national level through
+                                inter-college screening.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="ach-img">
+                            <img src="img/GHRHack2.0.jpg" alt="Hackathon">
+                            <span class="ach-date">29 march 2026</span>
+                        </div>
+
+                        <div class="ach-content">
+                            <h4>GHRHack 2.0 Organizer</h4>
+                            <p>
+                                Lead organizer of national-level hackathon with 160+ participants and 40 teams.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========= CERTIFICATIONS ========= -->
+            <div class="achievement-group">
+
+                <h3 class="sub-heading">Certifications</h3>
+
+                <div class="cert-wrapper">
+                    <div class="cert-track">
+
+                        <!-- Card 1 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>JavaScript Training</h4>
+                            <p>IIT Bombay</p>
+                            <span>April 2025</span>
+                            <a href="img/certificate/java script_page-0001.jpg" target="_blank">View Certificate</a>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>Java Training</h4>
+                            <p>IIT Bombay</p>
+                            <span>April 2026</span>
+                            <a href="/img/certificate/java training.pdf" target="_blank">View Certificate</a>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>Data Analyst</h4>
+                            <p>Oneroadmap</p>
+                            <span>July 2025</span>
+                            <a href="img/certificate/Data Analyst-Certificate.pdf" target="_blank">View Certificate</a>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>Data Engineering</h4>
+                            <p>GUVI | HCL</p>
+                            <span>May 2026</span>
+                            <a href="img/certificate/GuviCertification.png" target="_blank">View Certificate</a>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>Gen AI Tools</h4>
+                            <p>FutureSkills</p>
+                            <span>May 2026</span>
+                            <a href="img/certificate/Gen AI Tool.pdf" target="_blank">View Certificate</a>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>Frontend Development</h4>
+                            <p>Oneroadmap</p>
+                            <span>July 2025</span>
+                            <a href="img/certificate/Frontend Development.pdf" target="_blank">View Certificate</a>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="cert-card">
+                            <div class="cert-icon">🏅</div>
+                            <h4>AIXPLORE 2K26</h4>
+                            <p>Nagpur</p>
+                            <span>April 2026</span>
+                            <a href="img/certificate/aixplore certificate.pdf" target="_blank">View Certificate</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+
+        <div class="contact-heading">
+            <h2 class="main-heading">
+                For Any Queries
+                <span>Contact Now</span>
+            </h2>
+        </div>
+
+        <div class="contact-wrapper">
+
+            <!-- LEFT CARD : CONTACT INFO -->
+
+            <div class="contact-info-card">
+
+                <h3>Get In Touch</h3>
+
+                <p>
+                    Feel free to contact me for projects, collaborations,freelance work, or any tech-related
+                    discussions.
+                </p>
+
+                <!-- EMAIL -->
+
+                <div class="contact-info-box">
+
+                    <div class="contact-info-left">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <div>
+                            <h4>Email</h4>
+                            <span>avijeeetjha1@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <a href="mailto:avijeeetjha1@gmail.com" target="_blank">
+                        <button>Open</button>
+                    </a>
+
+                </div>
+
+                <!-- LINKEDIN -->
+
+                <div class="contact-info-box">
+
+                    <div class="contact-info-left">
+                        <i class="fa-brands fa-linkedin"></i>
+
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <span>Avijeet Jha</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.linkedin.com/in/avijeet-jha-3662682b9/" target="_blank">
+                        <button>Visit</button>
+                    </a>
+
+                </div>
+
+                <!-- GITHUB -->
+
+                <div class="contact-info-box">
+
+                    <div class="contact-info-left">
+                        <i class="fa-brands fa-github"></i>
+
+                        <div>
+                            <h4>GitHub</h4>
+                            <span>github.com/Avijeet-jha</span>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/Avijeet-jha/default" target="_blank">
+                        <button>Visit</button>
+                    </a>
+
+                </div>
+
+                <!-- INSTAGRAM -->
+
+                <div class="contact-info-box ">
+
+                    <div class="contact-info-left">
+                        <i class="fa-brands fa-instagram"></i>
+
+                        <div>
+                            <h4>Instagram</h4>
+                            <span>Avijeet jha</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.instagram.com/jha_avijeet/?hl=en" target="_blank">
+                        <button>Visit</button>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT CARD : CONTACT FORM -->
+
+            <div class="contact-card" id="contact">
+
+                <form class="contact-form">
+                    <h3 class="form-title">Send Me a Message</h3>
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>Enter Name</label>
+                            <input type="text" placeholder="Enter Your Full Name">
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="Enter Email">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phone No.</label>
+                            <input type="tel" placeholder="Enter Number">
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label>Service</label>
+                        <input type="text" placeholder="Web Design / Portfolio / Business Website">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-btn">
+
+                        <span>Submit</span>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- LEFT -->
+
+            <div class="footer-left">
+                <p>
+                    © 2026 Avijeet Jha. All Rights Reserved.
+                </p>
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="footer-right">
+
+                <a href="https://github.com/Avijeet-jha/default" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/avijeet-jha-7b2a0a21b/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/jha_avijeet/?hl=en" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script src="index.js"></script>
+
+</html>
