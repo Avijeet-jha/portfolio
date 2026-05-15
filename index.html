@@ -272,7 +272,7 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="img/ajaha.png" alt="project">
+                        <img src="/img/ajaha.png" alt="project">
                     </div>
 
                     <div class="project-overlay">
@@ -525,55 +525,79 @@
 
             <!-- RIGHT CARD : CONTACT FORM -->
 
-            <div class="contact-card" id="contact">
+<div class="contact-card" id="contact">
 
-                <form class="contact-form">
-                    <h3 class="form-title">Send Me a Message</h3>
-                    <div class="form-row">
+    <form class="contact-form" id="contact-form">
 
-                        <div class="input-group">
-                            <label>Enter Name</label>
-                            <input type="text" placeholder="Enter Your Full Name">
-                        </div>
+        <h3 class="form-title">Send Me a Message</h3>
 
+        <div class="form-row">
 
-                    </div>
+            <div class="input-group">
+                <label>Enter Name</label>
 
-                    <div class="form-row">
-
-                        <div class="input-group">
-                            <label>E-mail</label>
-                            <input type="email" placeholder="Enter Email">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Phone No.</label>
-                            <input type="tel" placeholder="Enter Number">
-                        </div>
-
-                    </div>
-
-                    <div class="input-group">
-                        <label>Service</label>
-                        <input type="text" placeholder="Web Design / Portfolio / Business Website">
-                    </div>
-
-                    <div class="input-group">
-                        <label>Message</label>
-                        <textarea placeholder="Write your message here..."></textarea>
-                    </div>
-
-                    <button type="submit" class="contact-btn">
-
-                        <span>Submit</span>
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                    </button>
-
-                </form>
-
+                <input 
+                type="text" 
+                name="from_name"
+                placeholder="Enter Your Full Name"
+                required>
             </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="input-group">
+                <label>E-mail</label>
+
+                <input 
+                type="email" 
+                name="from_email"
+                placeholder="Enter Email"
+                required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.</label>
+
+                <input 
+                type="tel" 
+                name="phone"
+                placeholder="Enter Number"
+                required>
+            </div>
+
+        </div>
+
+        <div class="input-group">
+            <label>Service</label>
+
+            <input 
+            type="text" 
+            name="service"
+            placeholder="Web Design / Portfolio / Business Website">
+        </div>
+
+        <div class="input-group">
+            <label>Message</label>
+
+            <textarea 
+            name="message"
+            placeholder="Write your message here..."
+            required></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">
+
+            <span>Submit</span>
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </button>
+
+    </form>
+
+</div>
 
         </div>
 
@@ -616,6 +640,7 @@
     </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="index.js"></script>
 
 </html>
