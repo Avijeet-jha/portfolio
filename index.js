@@ -1,6 +1,5 @@
-if ('scrollRestoration' in history) {
-  
-  history.scrollRestoration = 'manual';
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
 }
 
 window.onload = function () {
@@ -8,7 +7,6 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-
   /* ================== NAVBAR ================== */
 
   const hamburger = document.getElementById("hamburger");
@@ -25,15 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const navItems = document.querySelectorAll(".nav-links a");
 
-navItems.forEach((item) => {
-
-  item.addEventListener("click", () => {
-
-    navLinks.classList.remove("active");
-
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
   });
-
-});
 
   /* ================== TYPING EFFECT ================== */
 
@@ -42,17 +36,13 @@ navItems.forEach((item) => {
   let index = 0;
 
   function typeEffect() {
-
     if (index < text.length) {
-
       document.getElementById("typing-text").textContent += text.charAt(index);
 
       index++;
 
       setTimeout(typeEffect, 80);
-
     }
-
   }
 
   typeEffect();
@@ -75,7 +65,6 @@ navItems.forEach((item) => {
   }
 
   function showCard(i) {
-
     cards[current].classList.remove("active");
 
     if (dots[current]) {
@@ -83,7 +72,6 @@ navItems.forEach((item) => {
     }
 
     setTimeout(() => {
-
       current = i;
 
       cards[current].classList.add("active");
@@ -91,25 +79,19 @@ navItems.forEach((item) => {
       if (dots[current]) {
         dots[current].classList.add("active");
       }
-
     }, 200);
-
   }
 
   function autoSwitch() {
-
     let next = (current + 1) % cards.length;
 
     showCard(next);
-
   }
 
   let interval = setInterval(autoSwitch, 4000);
 
   dots.forEach((dot) => {
-
     dot.addEventListener("click", () => {
-
       let i = parseInt(dot.getAttribute("data-index"));
 
       showCard(i);
@@ -117,9 +99,7 @@ navItems.forEach((item) => {
       clearInterval(interval);
 
       interval = setInterval(autoSwitch, 4000);
-
     });
-
   });
 
   /* ================== CERTIFICATION SLIDER ================== */
@@ -130,16 +110,13 @@ navItems.forEach((item) => {
   // MOBILE = MANUAL ONLY
 
   if (wrapper && window.innerWidth > 768) {
-
     let direction = 1;
     let speed = 0.5;
 
     let isPaused = false;
 
     function animate() {
-
       if (!isPaused) {
-
         let maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
 
         wrapper.scrollLeft += direction * speed;
@@ -147,27 +124,21 @@ navItems.forEach((item) => {
         // RIGHT END
 
         if (wrapper.scrollLeft >= maxScroll) {
-
           wrapper.scrollLeft = maxScroll;
 
           direction = -1;
-
         }
 
         // LEFT END
 
         if (wrapper.scrollLeft <= 0) {
-
           wrapper.scrollLeft = 0;
 
           direction = 1;
-
         }
-
       }
 
       requestAnimationFrame(animate);
-
     }
 
     animate();
@@ -181,37 +152,56 @@ navItems.forEach((item) => {
     wrapper.addEventListener("mouseleave", () => {
       isPaused = false;
     });
-
   }
 
   /* ================== NAVBAR HIDE ON SCROLL ================== */
 
-if (window.innerWidth > 768) {
+  if (window.innerWidth > 768) {
+    let lastScroll = 0;
 
-  let lastScroll = 0;
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
 
-  window.addEventListener("scroll", () => {
+      // SCROLL DOWN
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        navbar.style.top = "-100px";
+      }
 
-    const currentScroll = window.pageYOffset;
+      // SCROLL UP
+      else {
+        navbar.style.top = "0";
+      }
 
-    // SCROLL DOWN
-    if (currentScroll > lastScroll && currentScroll > 100) {
+      lastScroll = currentScroll;
+    });
+  }
 
-      navbar.style.top = "-100px";
+  /* ================== CONTACT FORM ================== */
 
-    }
+emailjs.init("Fv1AnvVRjIQkDXdrz");
 
-    // SCROLL UP
-    else {
+const form = document.getElementById("contact-form");
 
-      navbar.style.top = "0";
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    }
+    emailjs
+      .sendForm("service_480uk5f", "template_zywn91h", this)
 
-    lastScroll = currentScroll;
+      .then(function () {
+        alert("Message Sent Successfully!");
 
+        form.reset();
+      })
+
+      .catch(function (error) {
+        alert("Failed To Send Message");
+
+        console.log(error);
+      });
   });
-
 }
-
 });
+
+
