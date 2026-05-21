@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ================== TYPING EFFECT ================== */
 
-  const text = "Full Stack Developer, AI Enthusiast, Problem Solver";
+  const text = "Full Stack Developer | AI Enthusiast | Problem Solver";
 
   let index = 0;
 
