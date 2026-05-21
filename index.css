@@ -170,15 +170,29 @@ body {
 }
 
 .hero-text {
-  max-width: 420px;
+  max-width: 500px;
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #typing-text {
   color: #00f0ff;
   font-weight: 500;
   letter-spacing: 0.5px;
+
+  max-width: 500px;
+  min-height: 120px;
+
+  line-height: 1.5;
+
+  margin: 0 auto;
+
+  text-align: center;
 }
+
 
 #typing-text::after {
   content: "|";
